@@ -43,7 +43,9 @@ export const OneProfile = (props) => {
       .sort((a, b) => new Date(b.posted) - new Date(a.posted));
   };
 
-  const filteredPosts = filterByRecentDate(store.posts);
+const filteredPosts = store.posts.filter((post) => post.user_id === id);
+
+const sortedPosts = filterByRecentDate(filteredPosts);
 
   useEffect(() => {
     actions.getUserDetails();
@@ -250,12 +252,12 @@ export const OneProfile = (props) => {
                 >
                   Posts by {userProfile.username}
                 </label>
-                {filteredPosts.length === 0 || (!store.user.post_id || store.user.post_id.length === 0) ? (
+                {sortedPosts.length === 0 || (!store.user.post_id || store.user.post_id.length === 0) ? (
                   <Alert variant="filled" severity="info">
                     Sorry! No posts found...
                   </Alert>
                 ) : (
-                  filteredPosts.map((post_id, index) => (
+                  sortedPosts.map((post_id, index) => (
                     <div className="col-10 col-md-8 col-lg-4 mt-3" key={index}>
                       <PostsOneProfile
                         image={post_id.image}
