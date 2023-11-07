@@ -220,7 +220,7 @@ export const Profile = () => {
                      <img
                       src={
                         !store.user.image ? placeholder : store.user.image
-                        }
+                        } className="responsive-image m-3"
                   />
                   </>
                 ) : (
@@ -229,7 +229,7 @@ export const Profile = () => {
                       src={
                         !store.user.image ? placeholder : store.user.image
                         }
-                       style={{display:'flex',margin:"auto"}}
+                       style={{display:'flex',margin:"auto"}} className="responsive-image m-3"
                     />
                     <div className="btn-foto d-flex mb-3">
                       <input

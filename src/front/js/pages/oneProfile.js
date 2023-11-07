@@ -45,6 +45,8 @@ export const OneProfile = (props) => {
 
 const filteredPosts = store.posts.filter((post) => post.user_id === id);
 
+console.log("Filtered Posts:", filteredPosts);
+
 const sortedPosts = filterByRecentDate(filteredPosts);
 
   useEffect(() => {
