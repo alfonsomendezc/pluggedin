@@ -26,7 +26,7 @@ function HeroSection() {
           </Link>
         </div>
       </div>
-      <div style={{ position: "absolute", bottom: 0, left: 0, color: "lightgray", fontSize: "8px" }}>
+      <div style={{ position: "absolute", bottom: 177, left: 0, color: "lightgray", fontSize: "10px" }}>
         Image created by Pixel Jeff - <a href="https://www.behance.net/pixeljeff">Behance.net</a>
       </div>
     </div>
