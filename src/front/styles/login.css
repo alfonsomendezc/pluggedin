@@ -1,0 +1,107 @@
+/* Common styles */
+.login {
+  position: absolute;
+  color: white;
+  width: 100%;
+}
+.login::before {
+  content: "";
+  position: absolute;
+  top: -5;
+  left: 0;
+  width: 100%;
+  height: 89.5vh;
+  background-image: url("https://wallpapercave.com/wp/wp12395725.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+.login-button {
+  margin-left: 10px;
+}
+
+
+
+/* Styles for large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .login-container {
+    max-width: 850px;
+    max-height: 600px;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+
+
+  .register-photo {
+    width: 100%;
+    padding-top: 65%; /* 16:9 aspect ratio */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-fluid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .redirect-link {
+    padding: 15px;
+    text-decoration: none !important;
+    color: rgb(63, 61, 192);
+    text-align: center;
+  }
+}
+
+/* Styles for medium screens (768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .login-container {
+    max-width: 900px;
+    max-height: auto;
+    margin: auto;
+    margin-top: 100px;
+  }
+  .redirect-link {
+    font-size: 15px;
+    padding: 15px;
+    text-decoration: none !important;
+    color: rgb(63, 61, 192);
+    text-align: center;
+  
+}
+
+
+  .register-photo {
+    display: flex;
+    width: 70%;
+    height: auto;
+  }
+}
+
+/* Styles for small screens (up to 767px) */
+@media (max-width: 767px) {
+  .login-container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .register-photo {
+    display: flex;
+    width: 400px;
+    height: auto;
+  }
+}

@@ -1,0 +1,23 @@
+.game-image {
+    max-width: 800px;
+    border: solid rgb(40, 164, 221) 3px;
+    border-radius: 25px;
+}
+.custom-divider {
+    border-top: 1px solid rgb(40, 164, 221); /* Adjust the color as needed */
+    margin: 16px 0; /* Adjust the margin as needed */
+    width: 100%; /* Adjust the width as needed */
+    height: 1px; /* Adjust the height as needed */
+  }
+.metacritic {
+    border-radius: 50%;
+    background-color: rgb(34, 142, 192);
+    font-size: 40px;
+    box-shadow: 6px 4px 4px rgb(13, 60, 82);
+}
+
+.game-description {
+    border: solid rgb(29, 118, 148);
+    border-radius: 5px;
+    background-color: rgba(13, 13, 58, 0.733);
+}

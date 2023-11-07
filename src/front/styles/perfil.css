@@ -1,0 +1,164 @@
+.perfil-body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/878627699988794060/9D5A4B4C42739A468BD02328B4EAC57B3C5A550F/");
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+.perfil {
+    border: solid rgba(0, 255, 255, 0.479);
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 25px;
+    max-width: 1250px;
+    color: rgb(255, 255, 255);
+    background-color: #151e3d;
+    position: relative;
+    z-index: 1;
+}
+
+.img-username {
+  max-width: 450px;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: 100%;  
+}
+@media (max-width: 576px) {
+  .responsive-image {
+    max-width: 50%;
+    height: 50%; /* Adjust the value as needed to control the size */
+  }
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+}
+
+@media (max-width: 576px) {
+  .image img {
+    max-width: 50%;
+    height: 50%;
+  }
+}
+
+.username {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.input-foto {
+  width: 250px;
+  margin: auto;
+}
+
+.search .btn-primary input {
+  width: 300px;
+}
+
+.search input::placeholder {
+  color: white;
+}
+
+.info-extra {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.466);
+  padding-top: 5px;
+}
+.info-extra2 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.466);
+}
+
+.card {
+  display: flex;
+  color: black;
+}
+.btn-foto {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.titulo-descripcion {
+  font-size: 20px;
+  font-weight: 600;
+  color: aqua;
+  padding-top: 15px;
+}
+
+.your-posts {
+  font-size: 25px;
+  padding: 15px;
+  color: white;
+  background-color: rgba(0, 255, 255, 0.3);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .your-posts {
+    font-size: 18px; /* Adjust the font size for smaller screens */
+    padding: 10px; /* Adjust the padding for smaller screens */
+    border-radius: 10px; /* Adjust the border-radius for smaller screens */
+  }
+}
+.titulo-descripcion-username {
+  font-size: 25px;
+  font-weight: 700;
+  color: aqua;
+  padding-top: 15px;
+}
+.text-field {
+  padding: 15px;
+}
+
+.TextField {
+  color: white;
+  width: 100%;
+  padding: 5px;
+}
+
+.dropdown-menu {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.no-comments {
+  text-align: center;
+  color: gray;
+  background-color: rgba(128, 128, 128, 0.199);
+  padding: 5px 0px;
+}
+
+.tus-posts {
+  border-top: solid rgba(255, 255, 255, 0.466);
+}
+
+/* padding-bottom: 15px;
+    border-bottom: solid rgba(214, 214, 214, 0.13); */
+
+.delete-icon {
+  border: none;
+  margin-left: auto;
+  background-color: white;
+}
+.delete-icon:hover {
+  border: none;
+  margin-left: auto;
+  background-color: rgb(189, 189, 189);
+  border-radius: 20%;
+}
