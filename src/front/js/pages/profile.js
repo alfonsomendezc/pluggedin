@@ -217,21 +217,22 @@ export const Profile = () => {
                 {!canEdit ? (
                   <>
                     {" "}
-                    <img
+                     <img
                       src={
-                        store.user.image === ""
-                          ? placeholder
-                          : store.user.image
-                      }
-                    />
+                        store.user.image === "" || store.user.image === null
+                        ? placeholder
+                        : store.user.image
+                        }
+                  />
                   </>
                 ) : (
                   <div style={{display:"block"}}>
                     <img
                       src={
-                        store.user.image === ""
-                          ? placeholder
-                          : store.user.image
+                        store.user.image === "" || store.user.image === null
+                        ? placeholder
+                        : store.user.image
+                        }
                       } style={{display:'flex',margin:"auto"}}
                     />
                     <div className="btn-foto d-flex mb-3">
