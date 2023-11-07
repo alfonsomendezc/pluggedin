@@ -675,7 +675,7 @@ export const FindGamers = (props) => {
             </div>
           </Grid>
         </Grid>
-        {localStorage.getItem("token") == undefined || !store.isLoggedIn && (
+        {localStorage.getItem("token") == undefined && (
           <Redirect to={"/log-in"}></Redirect>
         )}
         <ToastContainer />
