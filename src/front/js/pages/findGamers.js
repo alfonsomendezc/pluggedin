@@ -629,7 +629,7 @@ export const FindGamers = (props) => {
                   style={{ display: "flex", justifyContent: "center" }}
                 >
                   <div>
-                    <div className="posts-columnas d-flex flex-wrap">
+                    <div className="posts-columnas col-10 col-md-8 col-lg-4 mt-3" key={index}>">
                       {isLoading ? (
                         <ThemeProvider theme={darkTheme}>
                           <CircularProgress size={80} />
