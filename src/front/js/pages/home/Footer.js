@@ -9,12 +9,11 @@ function Footer() {
     <div className='footer-container'>
 
       <div class='social-media'>
-        <p style={{color:"white"}} className="pt-2">© Plugged In. This website is for practice and educational purposes. All content displayed is used under fair use or with proper attribution to respective owners. If you believe content infringes your rights, please contact us."</p>
         <div class='social-media-wrap'>
           <div class='footer-logo'>
               <img src={Logo} alt="Plugged-In" className="navbar-logo" />
           </div>
-          <small class='website-rights'>Alfonso Mendez Caraballo © 2023 // With the help of RAWG.API © 2023</small>
+          <small class='website-rights' style={{textAlign:"center"}}>Alfonso Mendez Caraballo © 2023 // With the help of RAWG.API © 2023</small>
           <div class='social-icons'>
             
             <a
@@ -28,6 +27,7 @@ function Footer() {
           </div>
         </div>
       </div>
+        <p style={{color:"gray", fontSize:"10px", textAlign:"center"}} className="pt-2">© Plugged In. This website is for practice and educational purposes. All content displayed is used under fair use or with proper attribution to respective owners. If you believe content infringes your rights, please contact us."</p>
     </div>
   );
 }
