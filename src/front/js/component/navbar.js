@@ -21,6 +21,7 @@ export const Navbar = () => {
       setButton(true);
     }
   };
+
   const isAuthenticated = () => {
     // Get the JWT token from localStorage or wherever you store it.
     const token = localStorage.getItem("token"); // Assuming you store the token in localStorage
@@ -34,30 +35,10 @@ export const Navbar = () => {
       // Check if the token has not expired (current time is before the expiration time)
       return Date.now() < expirationTime;
     }
-
-  const tokenExpired = () => {
-      // Get the JWT token from localStorage or wherever you store it.
-      const token = localStorage.getItem("token"); // Assuming you store the token in localStorage
     
-      // Check if the token exists
-      if (token) {
-        // Decode the token to get the expiration timestamp
-        const tokenData = JSON.parse(atob(token.split(".")[1]));
-        const expirationTime = tokenData.exp * 1000; // Convert to milliseconds
-    
-        // Check if the token has expired (current time is after the expiration time)
-        return Date.now() >= expirationTime;
-      }
-    
-      // Token doesn't exist, so technically it has expired
-      return true;
-    };
-    
-  
-    // Token doesn't exist or has expired
+    // Token doesn't exist, so technically it has expired
     return false;
   };
-  
 
   useEffect(() => {
     showButton();
@@ -74,7 +55,7 @@ export const Navbar = () => {
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            {!isAuthenticated() || tokenExpired() ? (
+            {!isAuthenticated() ? (
               <>
                 <li className="nav-item">
                   <Link
