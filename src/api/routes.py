@@ -66,19 +66,19 @@ def handle_login():
         }
         return jsonify(response_body), 200
 
-@api.route('/user-details', methods=['GET','PUT'])
+@api.route('/user-details', methods=['GET', 'PUT'])
 @jwt_required()
 def handle_user_details():
     if request.method == 'GET':
         current_user = get_jwt_identity()
         user = User.query.filter_by(id=current_user).one_or_none()
-        user_profile = Profile.query.filter_by(user_id = current_user).one_or_none()
+        user_profile = Profile.query.filter_by(user_id=current_user).one_or_none()
         newUser = user.serialize()
         if user_profile is None:
-            return jsonify({"user_data":newUser})
+            return jsonify({"user_data": newUser})
         user_details = user_profile.serialize()
         data = {**newUser, **user_details}
-        return jsonify({"user_data":data}), 200
+        return jsonify({"user_data": data}), 200
     if request.method == 'PUT':
         current_user = get_jwt_identity()
         data = request.data
@@ -86,14 +86,24 @@ def handle_user_details():
         data_decoded = json.loads(data)
         userProfile = Profile.query.filter_by(user_id=current_user).one_or_none()
         if userProfile is None:
-            create_user_profile_data = Profile(user_id=current_user, about_me=json_data["about_me"], image=json_data['image'], favorite_games=json_data["favorite_games"], region=json_data["region"], contact=json_data["contact"], platform=json_data["platform"])
+            image = json_data.get("image", "")
+            create_user_profile_data = Profile(
+                user_id=current_user,
+                about_me=json_data["about_me"],
+                image=image,
+                favorite_games=json_data["favorite_games"],
+                region=json_data["region"],
+                contact=json_data["contact"],
+                platform=json_data["platform"],
+            )
             db.session.add(create_user_profile_data)
             db.session.commit()
-            return jsonify ({"profile_data":create_user_profile_data.serialize()}), 201
+            return jsonify({"profile_data": create_user_profile_data.serialize()}), 201
         updated = userProfile.update(**data_decoded)
-        if updated: 
-            return jsonify ({"profile_data":"User Updated"}), 204
-        return jsonify ({"profile_data":"Something happened... Try again"}), 500
+        if updated:
+            return jsonify({"profile_data": "User Updated"}), 204
+        return jsonify({"profile_data": "Something happened... Try again"}, 500)
+
 
 @api.route('/user-details/favorite-games', methods=['PUT'])
 @jwt_required()
