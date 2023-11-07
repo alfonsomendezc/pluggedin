@@ -233,7 +233,7 @@ export const Profile = () => {
                         ? placeholder
                         : store.user.image
                         }
-                      } style={{display:'flex',margin:"auto"}}
+                      style={{display:'flex',margin:"auto"}}
                     />
                     <div className="btn-foto d-flex mb-3">
                       <input
