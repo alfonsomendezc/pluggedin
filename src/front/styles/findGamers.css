@@ -307,6 +307,11 @@ input:focus {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .posts-columnas {
+    display: block; /* Change to a block layout for smartphones */
+  }
+}
 
 .comment-content {
   font-size: 14px;

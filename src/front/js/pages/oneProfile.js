@@ -252,7 +252,7 @@ const sortedPosts = filterByRecentDate(filteredPosts);
                 >
                   Posts by {userProfile.username}
                 </label>
-                {sortedPosts.length === 0 || (!store.user.post_id || store.user.post_id.length === 0) ? (
+                {sortedPosts.length === 0 ? (
                   <Alert variant="filled" severity="info">
                     Sorry! No posts found...
                   </Alert>

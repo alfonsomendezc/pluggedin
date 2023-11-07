@@ -37,12 +37,12 @@ class User(db.Model):
 class Profile(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
-    about_me = db.Column(db.String(250), unique=True, nullable=False)
+    about_me = db.Column(db.String(250), unique=False, nullable=False)
     image = db.Column(db.String(240), nullable=True)
     favorite_games = db.Column(db.String(50), unique=False, nullable=False)
     region = db.Column(db.String(50), unique=False, nullable=False)
     platform = db.Column(db.String(50), unique=False, nullable=False)
-    contact = db.Column(db.String(50), unique=True, nullable=False)
+    contact = db.Column(db.String(50), unique=False, nullable=False)
     post_id = db.relationship('Post_user', backref='post', lazy=True)
     profile_comments = db.relationship('Comment', backref='profile_comment', lazy=True)
 

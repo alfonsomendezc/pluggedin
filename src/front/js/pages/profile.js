@@ -219,9 +219,7 @@ export const Profile = () => {
                     {" "}
                      <img
                       src={
-                        store.user.image === "" || store.user.image === null
-                        ? placeholder
-                        : store.user.image
+                        !store.user.image ? placeholder : store.user.image
                         }
                   />
                   </>
@@ -229,11 +227,9 @@ export const Profile = () => {
                   <div style={{display:"block"}}>
                     <img
                       src={
-                        store.user.image === "" || store.user.image === null
-                        ? placeholder
-                        : store.user.image
+                        !store.user.image ? placeholder : store.user.image
                         }
-                      style={{display:'flex',margin:"auto"}}
+                       style={{display:'flex',margin:"auto"}}
                     />
                     <div className="btn-foto d-flex mb-3">
                       <input
