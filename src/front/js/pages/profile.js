@@ -758,7 +758,7 @@ export const Profile = () => {
                 </>
               )}
             </div>
-            {localStorage.getItem("token") == undefined || !store.isLoggedIn&&  (
+            {localStorage.getItem("token") == undefined &&  (
               <Redirect to={"/log-in"}></Redirect>
             )}
           </div>
