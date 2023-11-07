@@ -644,7 +644,7 @@ export const FindGamers = (props) => {
                             filteredPosts.map((results, index) => {
                               return (
                                 <FadeIn>
-                                  <div key={results.id} className="m-3">
+                                  <div key={results.id} className="col-12 col-md-10 col-lg-4 m-3 posts-columnas">
                                     <Posts
                                       image={results.image}
                                       username={results.username}
